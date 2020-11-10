@@ -1,0 +1,531 @@
+.header {
+	font-family:"Georgia", "Times New Roman", "Arial";
+	padding: 10px;
+	text-align:center;
+	background:#7b7a85;
+	font-size: 10px;
+	font:Georgia;
+	margin-bottom: 30px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+label {
+	align: center;
+	font-weight: bold;
+}
+
+[class*="col-"] {
+	width: 100%;
+}
+
+.login-error {
+	color:#7f0303;
+	padding:1px;
+	border-radius:3px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.error-messages {
+	display:none;
+	color:#7f0303;
+	padding:1px;
+	border-radius:3px;
+	width:200px;
+	width:65%;
+	text-align: left;
+	font-weight: bold;
+}
+
+
+form, .body {
+	text-align: center;
+	float: center;
+	margin: auto;
+	background-color: #b3bac9;
+	width: 500px;
+	padding: 10px;
+	border: 2px solid black;
+}
+
+.body2 {
+	text-align: center;
+	float: center;
+	margin: auto;
+	background-color: #b3bac9;
+	width: 250px;
+	padding: 10px;
+	border: 2px solid black;
+}
+
+
+.container {
+	margin: auto;
+	margin-top: -10px;
+	width: 100px;
+	padding: 10px;
+	text-align: left;
+}
+
+.container_2{
+	margin: auto;
+
+}
+
+.container_3 {
+	width: 65%;
+	margin-top: -10px;
+	padding: 10px;
+	text-align: left;
+	margin-left: 80px;
+}
+
+
+h1 {
+	color: black;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
+h2 {
+	font-family:"Georgia", "Times New Roman", "Arial";
+	padding:3px;
+	text-align:center;
+	background-color: #b3bac9;
+	font-size:18px;
+	font:Georgia;
+}
+
+
+
+
+h4 {
+	font-size: 16px;
+}
+
+div.headMenu {
+	margin-bottom: 100px;
+}
+
+button {
+	padding: 15px 20px;
+	text-align:center;	
+	background-color: #737e99;
+	color: black;
+	font-size: 16px;
+	margin-bottom: 15px;
+	width: 65%;
+}
+
+button.history {
+	padding: 15px 20px;
+	width: 40%;
+	float: left;
+	margin-left: 20px;
+}
+
+button.logout {
+	padding: 15px 20px;
+	width: 40%;
+	float: right;
+	margin-right: 20px;
+}
+
+
+/*CSS for Client History*/
+
+
+.historyMenu:link, .historyMenu:visited {
+	font-weight: bold;
+	font-size: 16px;
+	color: white;
+	padding: 15px 20px;
+	background-color: #737e99;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 45%;
+}
+
+.historyMenu:hover, .historyMenu:active {
+	background-color: #2ECC71;
+}
+
+
+p.dateTime {
+	float: right;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 30%;
+}
+
+/*End CSS for Client History*/
+
+.menu {
+	color: black;
+	background-color: #82E0AA;
+	border-radius: 4px;
+	border-style: groove;
+}
+
+.linkMenu2 {
+	display: block;
+	margin: 10px;
+}	
+
+.linkMenu2:link, .linkMenu2:visited {
+	font-style: bold;
+	font-size: 16px;
+	color: black;
+	padding: 15px 20px;
+	background-color: #737e99;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+.linkMenu2:hover, .linkMenu2:active {
+	background-color: #2ECC71;
+}
+
+
+.linkMenu:link, .linkMenu:visited {
+	font-style: bold;
+	font-size: 16px;
+	color: black;
+	padding: 15px 20px;
+	background-color: #737e99;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 60%;
+	margin-bottom: 10px;
+}
+
+.linkMenu:hover, .linkMenu:active {
+	background-color: #2ECC71;
+}
+
+
+#removeButton {
+	width: 32px;
+	font-weight: bold;
+	height: 32px;
+	float:right;
+	color: black;
+	border: none;
+	background: none;
+	margin-top: -10px;
+	margin-left: -90px;
+	margin-right: 5%;
+	margin-bottom: 60px;
+}
+
+
+#submit {
+	background-color:#737e99;
+	font-weight: bold;
+	font-size: 14px;
+	border: none;
+	color: black;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 42%;
+}
+
+#reset {
+	background-color:#737e99;
+	font-weight: bold;
+	font-size: 14px;
+	border: none;
+	color: black;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 30%;
+}
+
+#cancel {
+	padding: 16px 32px;
+	text-align: center;
+	background-color:#737e99;
+	font-weight: bold;
+	font-size: 14px;
+	border: none;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 4px 2px;
+	width: 30%;
+}
+
+.container input:checked ~ .radioCheck {
+	background-color: #2196F3;
+}
+
+.button5 {
+	border-radius:100%;
+}
+
+hr {
+	border: 1px solid black;
+	margin-bottom: 25px;
+}
+
+hr.cTitle {
+	border: 2px solid white;
+}
+
+.response_msg{
+	margin-top:10px;
+	font-size:13px;
+	background:#E5D669;
+	color:#ffffff;
+	width:250px;
+	padding:3px;
+	display:none;
+}
+
+input[type=radio] {
+	float: left;
+	border-radius: 50%;
+	width: 2em;
+	background-color: #eee;
+}
+
+
+textarea, input[type=textarea],input[type=password], input[type=text],input[type=date] {
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+	width: 65%;
+	margin-bottom: 10px;
+	text-align:center;
+	display: inline;
+	resize:none;
+	word-wrap: break-word;
+}
+
+
+textarea.formulaCalc {
+	height: 5em;
+}
+
+input[type=text].paramUnit {
+	margin-bottom: 30px;
+}
+
+textarea.advice {
+	height: 10em;
+	margin-bottom: 30px;
+}
+
+
+
+button.result {
+	margin-top: 50px;
+	font-weight: bold;
+}
+
+
+
+button.delete {
+	right: 5%;
+}
+
+
+::placeholder {
+	text-align:center;
+	color:red;
+}
+
+/*For Client CSS*/
+
+.clientContainer {
+	width: 65%;
+	text-align: left;
+	margin: auto;
+}
+
+#recommendation {
+	display: none;
+	text-align: left;
+	margin-left: 5%;
+	margin-right: 10%;	
+}
+
+.recTitle {
+	background-color: #E59866;
+}
+
+
+.advice {
+	font-weight: bold;
+}
+
+input[type=number] {
+	margin-left: auto;
+	margin-right: auto;
+	height:20px;
+	width: 85%;
+	margin-bottom:10px;
+	margin-top: 10px;
+	margin-right: 5px;
+	text-align:center;
+	display: inline;
+	resize:none;
+	word-break: break-all;
+}
+
+.desc {
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+	width: 50px;
+	margin-bottom:10px;
+	margin-top: 10px;
+	margin-right: 5px;
+	text-align:center;
+	display: inline;
+	resize:none;
+	word-break: break-all;
+}
+
+a {
+	font-weight: bold;
+}
+
+a.homeMenu, a.linkMenu, a.linkMenu2 {
+	color: white;
+}
+
+.homeMenu:link, .homeMenu:visited {
+	font-style: bold;
+	font-size: 16px;
+	color: white;
+	padding: 15px 20px;
+	background-color: #C0392B;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+.homeMenu:hover, .homeMenu:active {
+	color: white;
+	font-style: bold;
+	background-color: #d55244;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 45%;
+	}
+}
+
+
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+/*	*/
+

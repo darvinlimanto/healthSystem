@@ -1,0 +1,271 @@
+/*For Client CSS*/
+form {
+	text-align: center;
+	background-color: #b3bac9;
+	margin: auto;
+  width: 35%;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.header {
+	font-family:"Georgia", "Times New Roman", "Arial";
+	padding:10px;
+	text-align:center;
+	background:#7b7a85;
+	font-size: 10px;
+	font:Georgia;
+	margin-bottom: 30px;
+}
+
+.header2 {
+	font-family:"Georgia", "Times New Roman", "Arial";
+	padding:10px;
+	text-align:center;
+	background-color: #00b8e6;
+	color: white;
+	font-size: 10px;
+	font:Georgia;
+	margin-bottom: 30px;
+}
+
+hr {
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+
+button {
+	padding: 10px 10px;
+	text-align:center;	
+	background-color:#737e99;
+	color: black;
+	font-size: 16px;
+	margin-bottom: 15px;
+	width: 50%;
+}
+
+
+
+
+button.result {
+	margin-top: 50px;
+}
+
+button.delete {
+	right: 5%;
+}
+
+
+::placeholder {
+	text-align:center;
+	color:red;
+}
+
+#submit {
+	background-color:#737e99;
+	font-weight: bold;
+	font-size: 14px;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#cancel {
+	background-color:#737e99;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+  border: none;
+  color: black;
+	padding: 16px 32px;
+	 margin: 4px 2px;
+	width: 30%;
+  cursor: pointer;
+
+}
+
+h1.cTitle {
+	font-family:"Georgia", "Times New Roman", "Arial";
+	padding:3px;
+	text-align:center;
+	background-color: #b3bac9;
+	font-size:18px;
+}
+
+h2 {
+	font-family:"Georgia", "Times New Roman", "Arial";
+	padding:3px;
+	text-align:center;
+	background-color: #9CACBC;
+	font-size:18px;
+	font:Georgia;
+}
+
+
+div.clientContainer {
+	width: 95%;
+	text-align: left;
+	margin: auto;
+}
+
+div.recommendation {
+	display: none;
+	text-align: left;
+	width: 100%;
+}
+
+p.advice {
+	margin-left: 5%;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
+
+
+
+input[type=number] {
+  margin-left: auto;
+  margin-right: auto;
+  height:20px;
+	width: 75%;
+  margin-bottom:10px;
+	margin-top: 10px;
+	margin-right: 5px;
+  text-align:center;
+	display: inline;
+	resize:none;
+	word-break: break-all;
+}
+
+input[type=text].desc {
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+	width: 75%;
+  margin-bottom:10px;
+	margin-top: 10px;
+	margin-right: 5px;
+  text-align:center;
+	display: inline;
+	resize:none;
+	word-break: break-all;
+}
+
+
+a {
+	font-weight: bold;
+}
+
+.homeMenu2:link, .homeMenu2:visited {
+	font-style: bold;
+	font-size: 16px;
+  color: white;
+  padding: 15px 20px;
+	background-color: #C0392B;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	width: 10%;
+	margin-bottom: 10px;
+}
+
+.homeMenu2:hover, .homeMenu2:active {
+	font-style: bold;
+  background-color: #d55244;
+}
+
+.homeMenu:link, .homeMenu:visited {
+	font-style: bold;
+	font-size: 16px;
+  color: white;
+  padding: 15px 20px;
+	background-color: #C0392B;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+.homeMenu:hover, .homeMenu:active {
+	font-style: bold;
+  background-color: #d55244;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	form, .body {
+		width: 92%;
+	}
+	header2 {
+		width: 100%;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+}
+
+/*	*/
+
+/*	*/

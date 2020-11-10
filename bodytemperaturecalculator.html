@@ -1,0 +1,75 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' type='text/css' href='client.css'>
+<title>Body Temperature Calculator </title>
+<script>
+function calcTL() {
+
+var temperaturelevel = document.getElementById('temperaturelevel').value;
+document.getElementById('recommendation').style.display = 'inline-block';
+var TL = temperaturelevel;
+TL = (Math.round(TL * 100) / 100).toFixed(2);
+document.getElementById('formula').value = TL;
+
+if(TL>=38){
+							document.getElementById('desc').value ='High Temperature';
+							document.getElementById('advice').innerHTML = 'You have fever. Take a rest and call doctor if needed.';
+							}
+if(TL>=36&&TL<38){
+							document.getElementById('desc').value ='Normal Temperature';
+							document.getElementById('advice').innerHTML = 'Your body temperature is in normal range.';
+							}
+if(TL<36){
+							document.getElementById('desc').value ='Low Temperature';
+							document.getElementById('advice').innerHTML = 'Possible case of hypothermia. Contact doctor immediately';
+							}
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ':' + today.getMinutes();
+var dateTime = date+' '+time;
+document.getElementById('date').innerHTML = dateTime;
+
+}
+</script>
+<body>
+<div class='header'>
+<h1>Health System Application</h1>
+<h2> Blood Temperature Calculator </h2>
+</div>
+<form id ='clientData' action='clientData.php' method='post' >
+<h2>Enter Your Information</h2>
+<div class = 'clientContainer'>
+
+<label for ='temperaturelevel'>Enter temperature level</label><br><input type='number' step='any' id='temperaturelevel' name='value[]'/>Celcius<br></div>
+<button type='button' value='Get Result' class='result' onclick='calcTL()'>Get Result</button>
+<hr>
+<h2>Results</h2>
+<div class = 'clientContainer'>
+<label for ='formula'>TL Value</label><br>
+<input type='number' id='formula' name='formula' readonly><br>
+<label for='desc'>Description </label><br>
+<input type='text' class='desc' id='desc' name='desc' readonly>
+<h3> Result generated on: </h3>
+<p name = 'date' id='date'></p>
+<input type='hidden' id='healthRiskTitle' name='healthRiskTitle' value='Body Temperature Calculator' readonly><br>
+
+<input type='hidden' id='parameterName' name='parameterName[]' value='temperaturelevel' readonly><br>
+</div>
+<div class='recommendation' id='recommendation'>
+<hr>
+<h2>Recommendations</h2>
+<p id='advice' name='advice' class='advice'> </p><br>
+</div>
+<hr>
+<a href='clientHome.php'><button id='cancel' type='button'> Cancel</button></a>
+<input type='submit' id='submit' name='submit' value='Submit'><br>
+</form>
+</body>
+</head>
+</html>

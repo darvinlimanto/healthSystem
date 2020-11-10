@@ -1,0 +1,76 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' type='text/css' href='client.css'>
+	<title>Blood Sugar Calculator </title>
+<script>
+function calcGL() {
+
+var glucoselevel = document.getElementById('glucoselevel').value;
+document.getElementById('recommendation').style.display = 'inline-block';
+var GL = glucoselevel;
+GL = (Math.round(GL * 100) / 100).toFixed(2);
+document.getElementById('formula').value = GL;
+
+if(GL>130){
+						document.getElementById('desc').value ='High Blood Sugar';
+						document.getElementById('advice').innerHTML = 'Exercise regularly, consume less carbohydrate.';
+						}
+if(GL>=70&&GL<=130){
+						document.getElementById('desc').value ='Normal Blood Sugar';
+						document.getElementById('advice').innerHTML = 'Your blood sugar level is Normal.';
+						}
+if(GL<70){
+						document.getElementById('desc').value ='Low Blood Sugar';
+						document.getElementById('advice').innerHTML = 'Consume more carbs, take tablet to increase blood sugar level if necessary.';
+						}
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ':' + today.getMinutes();
+var dateTime = date+' '+time;
+document.getElementById('date').innerHTML = dateTime;
+
+}
+</script>
+<body>
+<div class='header'>
+<h1>Health System Application</h1>
+<h2> Blood Sugar Calculator </h2>
+</div>
+<form id ='clientData' action='clientData.php' method='post' >
+<h2>Enter Your Information</h2>
+<div class = 'clientContainer'>
+
+<label for ='glucoselevel'>Enter glucose level</label><br><input type='number' step='any' id='glucoselevel' name='value[]'/>mg/dL<br></div>
+<button type='button' value='Get Result' class='result' onclick='calcGL()'>Get Result</button>
+<hr>
+<h2>Results</h2>
+<div class = 'clientContainer'>
+
+<label for ='formula'>GL Value</label><br>
+<input type='number' id='formula' name='formula' readonly><br>
+<label for='desc'>Description </label><br>
+<input type='text' class='desc' id='desc' name='desc' readonly>
+<h3> Result generated on: </h3>
+<p name = 'date' id='date'></p>
+<input type='hidden' id='healthRiskTitle' name='healthRiskTitle' value='Blood Sugar Calculator' readonly><br>
+
+<input type='hidden' id='parameterName' name='parameterName[]' value='glucoselevel' readonly><br>
+</div>
+<div class='recommendation' id='recommendation'>
+<hr>
+<h2>Recommendations</h2>
+<p id='advice' name='advice' class='advice'> </p><br>
+</div>
+<hr>
+<a href='clientHome.php'><button id='cancel' type='button'> Cancel</button></a>
+<input type='submit' id='submit' name='submit' value='Submit'><br>
+</form>
+</body>
+</head>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+		<title>Registration</title>
+	  	<link rel="stylesheet" type="text/css" href="pecss.css">
+	  	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+      	<script src="pejs.js"></script>
+   </head> 
+   <body>
+		<div class="header">
+			<h1>Health Systems Application</h1>
+      <h2>Registration</h2>
+    </div>
+		<form id="registerForm" action="register.php" method="post" onsubmit="return validateForm(this);" >
+			<h2> Please fill out all information to register an account </h2>
+			<div class="form-element">
+				<h4> Enter First Name</h4>
+				<textarea placeholder="Input First Name" name="fname" id="fname" onblur="validate(this)" ></textarea><br>
+				<span class="error-messages" id="fname-error-1">*Firstname field cannot be empty</span>
+			</div>
+			<div class="form-element">
+				<h4> Enter Last Name</h4>
+				<textarea placeholder="Input Last Name" name="lname" id="lname" onblur="validate(this)"></textarea><br>
+				<span class="error-messages" id="lname-error-1">*Lastname field cannot be empty</span>		
+			</div>
+			<div class="form-element">
+				<h4>Select Gender</h4>
+					<div class = "container">
+						<input type="radio" id="male" name="gender" value="m" checked="checked">
+						<label for="male">Male</label><br>
+					</div>	
+					<div class = "container">
+						<input type="radio" id="female" name="gender" value="f">
+						<label for="female">Female</label><br>
+					</div>
+			</div>
+			<div class="form-element">
+				<h4>Enter Date of Birth </h4>
+					<div class = "dob-container">
+						<input type="date" id="dob" name="dob">
+						<span class="error-messages" id="dob-error">*Date of Birth cannot be empty</span>		
+					</div>
+			</div>
+			<div class="form-element">
+				<h4>Enter E-mail Address:</h4>	
+				<textarea placeholder="Input e-mail" name="email" id="email" onblur="validate(this)"></textarea>
+				<span class="error-messages" id="email-error-1">*E-mail field cannot be empty.</span>
+				<span class="error-messages" id="email-error-2">*E-mail format is invalid</span>
+			</div>
+			<div class="form-element">
+				<h4>Enter Password</h4>
+				<input type="password" placeholder="Input Password" name="password" id="password" onblur="validate(this)">
+				<span class="error-messages" id="password-error-1">*Password field cannot be empty.</span>
+				<span class="error-messages" id="password-error-2">*Password is invalid</span>
+			</div>
+			<br>
+			<hr>
+			<div class = "container_3">
+				<h4> Notes: </h4>
+				<p> *All fields are required and it cannot be empty </p>
+				<p> *E-mail must use valid e-mail format. </p>
+				<p> *Password must contain minimum 8 and maximum 15 characters. </p>
+				<p> *Password must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character </p>
+			</div>
+			<hr>
+			<input type="reset" id="reset" class="registerbtn" value="Reset" onclick="clearAll()">
+			<input type="submit" name="submit" value="Submit" id="submit">
+			</form>
+		</body> 
+</html>
+          
+ 
+ 
